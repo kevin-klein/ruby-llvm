@@ -65,7 +65,8 @@ def array_factorial(n)
 end
 
 if( ARGV.length == 0 )
-  puts "Single run with 42 = "  + engine.run_function(mod.functions["fac"], 42).to_i.to_s
+  puts iter_factorial(4)
+  puts "Single run with 42 = "  + engine.run_function(mod.functions["fac"], 4).to_i.to_s
   exit
 end
 puts "Times show factorial execution times in milliseconds. Both for llvm and ruby iterative and recusive algorithms"
@@ -81,5 +82,3 @@ res = [ 1, 5 , 20 , 50 , 100 , 200 , 500 , 1000 , 2000 , 5000  ].each do |i|
   next if i < 10
   puts res.join("   ")
 end
-
-
